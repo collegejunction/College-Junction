@@ -336,3 +336,50 @@ h1 {
 .footer-column ul li a:hover {
     color: #fff;
 }
+
+
+/* Main Hero Section */
+.mainhero{
+    display: flex;
+}
+
+.hero_left{
+    margin: 125px;
+}
+
+.hero_left h2{
+    font-size: 50px;
+}
+
+.hero_left p{
+    font-size: 15px;
+}
+
+.hero_left button{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    height: 45px;
+    width: 133px;
+    border: none;
+    border-radius: 33px;
+    font-size: 17px;
+    margin-top: 18px;
+}
+
+.hero_right img{
+    height: 410px;
+    margin: 52px;
+    border-radius: 26px;
+    box-shadow: 56px -34px 1px 8px #8d8d8d;
+}
+
+.lowerbody{
+    background-color: #8d8d8d;
+    text-align: center;
+    height: 100px;
+}
+
+.lowerbody p{
+    padding: 24px;
+}
