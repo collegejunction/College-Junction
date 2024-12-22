@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>College Junction | Review</title>
+</head>
+
+<body style="background-color: white;">
+    {% include '/components/navbar/index.html' %}
+    <div class="review">
+        <h3>Rate College Experience</h3>
+        <form action="">
+            <div class="firstsection">
+                <label for="">Share Your Thought</label>
+                <br>
+                <input type="text" placeholder="Enter the text...">
+            </div>
+            <br>
+            <div class="secondsection">
+                <label for="">Title of Your Review</label>
+                <br>
+                <input type="text" placeholder="Enter the text...">
+            </div>
+            <br>
+            <div class="thirdsection">
+                <label for="">Add Image</label>
+                <br>
+                <input type="file" name="" id="">
+            </div>
+            <br>
+            <button>Publish Review</button>
+        </form>
+    </div>
+    {% include '/components/footer/index.html' %}
+
+</body>
+
+</html>

@@ -24,6 +24,10 @@ def hello_world():
 def home():
     return render_template("/components/search/index.html")
 
+@app.route("/review")
+def review():
+    return render_template("/components/review/index.html")
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if 'username' in session:
