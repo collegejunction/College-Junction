@@ -28,6 +28,18 @@ def home():
 def review():
     return render_template("/components/review/index.html")
 
+@app.route("/notes")
+def notes():
+    return render_template("/components/Notes/index.html")
+
+@app.route("/clgrev")
+def clgrev():
+    return render_template("/components/review/review.html")
+
+@app.route("/mainclg")
+def mainclg():
+    return render_template("/components/review/{collegename}.html")
+
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if 'username' in session:

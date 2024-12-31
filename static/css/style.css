@@ -9,7 +9,7 @@
 body {
     font-family: poppins;
     background-color: black;
-    color: white;
+    /* color: white; */
 }
 
 header {
@@ -23,7 +23,7 @@ header nav {
     /* margin: 12px; */
 }
 
-nav a{
+nav a {
     text-decoration: none;
     color: white;
 }
@@ -59,7 +59,7 @@ nav ul button {
     height: 500px;
     border-end-end-radius: 25px;
     border-end-start-radius: 25px;
-    
+
 }
 
 .hero {
@@ -89,6 +89,7 @@ nav ul button {
     padding: 10px 15px;
     border-radius: 20px 0 0 20px;
     font-size: 16px;
+    color: black;
 }
 
 .search-container button {
@@ -218,6 +219,7 @@ h1 {
 .middle-review h3 {
     margin-bottom: 12px;
     margin-top: 12px;
+    color: black;
 }
 
 .lower-review p {
@@ -235,10 +237,6 @@ h1 {
     margin-top: 12px;
 }
 
-.review-box:hover {
-    background-color: #000;
-    color: #fff;
-}
 
 .review-box i {
     font-size: 20px;
@@ -350,31 +348,31 @@ h1 {
 
 
 /* Main Hero Section */
-.mainhero{
+.mainhero {
     display: flex;
 }
 
-.hero_left{
+.hero_left {
     margin: 125px;
 }
 
-.hero_left h2{
+.hero_left h2 {
     font-size: 50px;
 }
 
-.hero_left p{
+.hero_left p {
     font-size: 15px;
 }
 
-.categ h1{
+.categ h1 {
     color: white;
 }
 
-.review h1{
+.review h1 {
     color: white;
 }
 
-.hero_left button{
+.hero_left button {
     background-color: white;
     color: black;
     cursor: pointer;
@@ -386,26 +384,26 @@ h1 {
     margin-top: 18px;
 }
 
-.hero_right img{
+.hero_right img {
     height: 410px;
     margin: 52px;
     border-radius: 26px;
     box-shadow: 56px -34px 1px 8px #8d8d8d;
 }
 
-.lowerbody{
+.lowerbody {
     background-color: #8d8d8d;
     text-align: center;
     height: 100px;
 }
 
-.lowerbody p{
+.lowerbody p {
     padding: 24px;
 }
 
 /* review page */
 
-.review{
+.review {
     background-color: black;
     border-radius: 12px;
     padding: 15px;
@@ -416,21 +414,21 @@ h1 {
     margin-top: 20px;
     margin-bottom: 20px;
 }
-
-.review h3{
+/* 
+.review h3 {
     color: white;
-}
+} */
 
-.review button{
+.review button {
     background-color: white;
     color: black;
 }
 
-.review form{
+.review form {
     padding: 12px;
 }
 
-.review input{
+.review input {
     width: 450px;
     height: 37px;
     border-radius: 12px;
@@ -439,4 +437,117 @@ h1 {
     color: black;
     padding: 7px;
     font-size: 17px;
+}
+
+.checked {
+    color: orange;
+}
+
+.black{
+    color: black;
+}
+
+/* Main review page section start from here */
+
+.review_section{
+    display: flex;
+    justify-content: space-between;
+    /* margin: 50px; */
+}
+
+.left_review h1{
+    color: white;
+}
+
+.left_review{
+    margin: 100px;
+}
+
+.left_review button{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    height: 45px;
+    width: 133px;
+    border: none;
+    border-radius: 33px;
+    font-size: 17px;
+    margin-top: 18px;
+}
+
+.right_review img{
+    height: 410px;
+    margin: 52px;
+    border-radius: 26px;
+}
+
+.backshadow{
+    background-color: #888;
+    height: 495px;
+    margin-top: -520px;
+}
+
+.main_photo{
+    display: flex;
+}
+
+.main_photo img{
+    height: 300px;
+    margin: 20px;
+    border-radius: 12px;
+}
+
+.upper_photo h1{
+    color: #fff;
+}
+
+.upper_photo{
+    display: flex;
+    justify-content: space-between;
+    margin: 35px;
+}
+
+.upper_photo button{
+    background-color: white;
+    color: black;
+    cursor: pointer;
+    height: 45px;
+    width: 133px;
+    border: none;
+    border-radius: 33px;
+    font-size: 17px;
+    margin-top: 18px;
+}
+
+.addright{
+    color: white;
+    margin-left: 120px;
+}
+
+.collegeaddress{
+    display: flex;
+    margin: 30px;
+}
+
+.addleft{
+    color: white;
+}
+
+.addleft iframe{
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+.addright{
+    margin: 156px;
+    margin-left: 265px;
+}
+
+.addright h3{
+    margin-top: 12px;
+}
+
+.rating{
+    margin: 60px;
+    color: white;
 }
