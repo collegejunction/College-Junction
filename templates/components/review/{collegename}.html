@@ -1,132 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="/static/css/style.css">
-  <title>College Junction | Review</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>{{ college_name }} | College Review</title>
 </head>
+
 <body>
-  {%include '/components/navbar/index.html'%}
+    {% include '/components/navbar/index.html' %}
 
-  <div class="review_section">
-    <div class="left_review">
-      <h1>Lokmanya Tilak College Of Engineering</h1>
-      <h1 class="star"><span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star checked"></span>
-        <span class="fa fa-star"></span>
-        <span class="fa fa-star"></span>
-    </h1>
-      <button>1</button>
-      <div class="three">
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-      </div>
-    </div>
-    <div class="right_review">
-      <img src="https://images.shiksha.com/mediadata/images/1493195071phpJiULet.jpeg" alt="">
-      <div class="backshadow"></div>
-    </div>
-  </div>
+    <div class="review_section">
+        <!-- Left Review Section -->
+        <div class="left_review">
+            <h1>{{ college_name }}</h1>
+            <h2>Courses: {{ college_courses }}</h2>
 
-  <div class="photo_video">
-    <div class="upper_photo">
-        <h1>Photo & Video</h1>
-        <button>See More...</button>
-    </div>
-    <div class="main_photo">
-      <img src="https://images.shiksha.com/mediadata/images/1493195071phpJiULet.jpeg" alt="">
-      <img src="https://images.shiksha.com/mediadata/images/1552905173php5txwDs.png" alt="">
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYnbjZQb9f7KQyn8YOHGdUb_2grohxvZb6MQ&s" alt="">
-    </div>
-  </div>
+            <!-- Star Rating -->
+            <h1 class="star">
+                {% for i in range(5) %}
+                    <span class="fa fa-star {% if rating_stars[i] == 'checked' %}checked{% else %}black{% endif %}"></span>
+                {% endfor %}
+            </h1>
+            <h3>Rating: {{ rating }}</h3>
 
-  <div class="collegeaddress">
-    <div class="addleft">
-      <h3>College Details & Address</h3>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.0443644230972!2d73.00467317500328!3d19.105709582105103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c0da59d0a01b%3A0x56642a54a185f894!2sLokmanya%20Tilak%20College%20of%20Engineering!5e0!3m2!1sen!2sin!4v1735636248138!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        <h4>Lokmanya Tilak College of Engineering</h4>
-        <h4>koparkhairane, NaviMumbai</h4>
-    </div>
-    <div class="addright">
-        <h3>Monday 09:00AM to 06:00PM</h3>
-        <h3>Tuesday 09:00AM to 06:00PM</h3>
-        <h3>Wednesday 09:00AM to 06:00PM</h3>
-        <h3>Thursday 09:00AM to 06:00PM</h3>
-        <h3>Friday 09:00AM to 06:00PM</h3>
-        <h3>Saturday 09:00AM to 03:00PM</h3>
-        <h3>Sunday</h3>
-    </div>
-  </div>
+            <div class="three">
+                <button>1</button>
+                <button>2</button>
+                <button>3</button>
+            </div>
+        </div>
 
+        <!-- Right Review Section -->
+        <div class="right_review">
+            <img src="{{ main_photo if main_photo else 'https://via.placeholder.com/150' }}" alt="College Image">
+            <div class="backshadow"></div>
+        </div>
+    </div>
 
+    <div class="photo_video">
+        <div class="upper_photo">
+            <h1>Photos & Videos</h1>
+            <button>See More...</button>
+        </div>
+        <div class="main_photo">
+            {% for photo in photos %}
+                <img src="{{ photo }}" alt="College Photo">
+            {% endfor %}
+        </div>
+    </div>
 
-  <div class="rating">
-    <h1>Review</h1>
-    <h1><span class="fa fa-star checked"></span>        4.1</h1>
-    <h3 class="star"><span class="fa fa-star checked"></span>
-      <br>
-      <span class="fa fa-star checked"></span>
-      <br>
-      <span class="fa fa-star checked"></span>
-      <br>
-      <span class="fa fa-star checked"></span>
-      <br>
-      <span class="fa fa-star checked"></span>
-      <br>
-  </h3>
-  </div>
+    <div class="collegeaddress">
+        <div class="addleft">
+            <h3>College Details & Address</h3>
+            <iframe src="https://www.google.com/maps/embed/v1/place?q={{ location }}&key=YOUR_GOOGLE_MAPS_API_KEY"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <h4>{{ college_name }}</h4>
+            <h4>{{ location }}</h4>
+        </div>
+        <div class="addright">
+            <h3>Monday 09:00AM to 06:00PM</h3>
+            <h3>Tuesday 09:00AM to 06:00PM</h3>
+            <h3>Wednesday 09:00AM to 06:00PM</h3>
+            <h3>Thursday 09:00AM to 06:00PM</h3>
+            <h3>Friday 09:00AM to 06:00PM</h3>
+            <h3>Saturday 09:00AM to 03:00PM</h3>
+            <h3>Sunday Closed</h3>
+        </div>
+    </div>
 
-  <div class="review-card">
-    <div class="review-header">
-      <img src="college-logo.png" alt="College Logo">
-      <div class="info">
-        <h3>College Name</h3>
-        <p>City, State</p>
-      </div>
-      <div class="stars">
-        &#9733; &#9733; &#9733; &#9733; &#9733;
-      </div>
+    <div class="rating">
+        <h1>Review</h1>
+        <h1><span class="fa fa-star checked"></span> {{ rating }}</h1>
+        <h3 class="star">
+            {% for i in range(5) %}
+                <span class="fa fa-star {% if rating_stars[i] == 'checked' %}checked{% else %}black{% endif %}"></span>
+            {% endfor %}
+        </h3>
     </div>
-    <div class="review-content">
-      <strong>Outstanding College Experience:</strong>
-      <p>
-        "From the moment I entered the college premises, I was met with a vibrant culture of inclusivity. The faculty and staff were approachable and kind. The modern infrastructure made my academic and personal growth feel seamless. Truly a delight to study in this institution."
-      </p>
-    </div>
-    <div class="review-buttons">
-      <button class="update">Update</button>
-      <button class="download">Dowload</button>
-    </div>
-  </div>
 
-  <div class="review-card">
-    <div class="review-header">
-      <img src="student-profile.png" alt="Student Profile">
-      <div class="info">
-        <h3>Student Name</h3>
-        <p>City, State</p>
-      </div>
-      <div class="stars">
-        &#9733; &#9733; &#9733; &#9733; &#9733;
-      </div>
+    <div class="review-card">
+        <div class="review-header">
+            <img src="{{ profile_pic }}" alt="User Profile">
+            <div class="info">
+                <h3>{{ session['username'] }}</h3>
+                <p>Location</p>
+            </div>
+            <div class="stars">
+                &#9733; &#9733; &#9733; &#9733; &#9733;
+            </div>
+        </div>
+        <div class="review-content">
+            <strong>Outstanding College Experience:</strong>
+            <p>"The college provides excellent infrastructure, professional faculty, and a great environment for students to thrive academically and personally."</p>
+        </div>
+        <div class="review-buttons">
+            <button class="update">Update</button>
+            <button class="download">Download</button>
+        </div>
     </div>
-    <div class="review-content">
-      <strong>Fantastic College Experience:</strong>
-      <p>
-        "I had an incredible experience studying at this college. The faculty and staff were friendly and professional, always encouraging and welcoming questions. The environment fosters not just academic but personal growth as well."
-      </p>
-    </div>
-    <div class="review-buttons">
-      <button class="update">Update</button>
-      <button class="download">Download</button>
-    </div>
-  </div>
-  {%include '/components/footer/index.html'%}
 
+    {% include '/components/footer/index.html' %}
 </body>
+
 </html>
