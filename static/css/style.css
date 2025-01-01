@@ -414,6 +414,7 @@ h1 {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
 /* 
 .review h3 {
     color: white;
@@ -443,27 +444,27 @@ h1 {
     color: orange;
 }
 
-.black{
+.black {
     color: black;
 }
 
 /* Main review page section start from here */
 
-.review_section{
+.review_section {
     display: flex;
     justify-content: space-between;
     /* margin: 50px; */
 }
 
-.left_review h1{
+.left_review h1 {
     color: white;
 }
 
-.left_review{
+.left_review {
     margin: 100px;
 }
 
-.left_review button{
+.left_review button {
     background-color: white;
     color: black;
     cursor: pointer;
@@ -475,39 +476,39 @@ h1 {
     margin-top: 18px;
 }
 
-.right_review img{
+.right_review img {
     height: 410px;
     margin: 52px;
     border-radius: 26px;
 }
 
-.backshadow{
+.backshadow {
     background-color: #888;
     height: 495px;
     margin-top: -520px;
 }
 
-.main_photo{
+.main_photo {
     display: flex;
 }
 
-.main_photo img{
+.main_photo img {
     height: 300px;
     margin: 20px;
     border-radius: 12px;
 }
 
-.upper_photo h1{
+.upper_photo h1 {
     color: #fff;
 }
 
-.upper_photo{
+.upper_photo {
     display: flex;
     justify-content: space-between;
     margin: 35px;
 }
 
-.upper_photo button{
+.upper_photo button {
     background-color: white;
     color: black;
     cursor: pointer;
@@ -519,35 +520,118 @@ h1 {
     margin-top: 18px;
 }
 
-.addright{
+.addright {
     color: white;
     margin-left: 120px;
 }
 
-.collegeaddress{
+.collegeaddress {
     display: flex;
     margin: 30px;
 }
 
-.addleft{
+.addleft {
     color: white;
 }
 
-.addleft iframe{
+.addleft iframe {
     margin-top: 12px;
     margin-bottom: 12px;
 }
 
-.addright{
+.addright {
     margin: 156px;
     margin-left: 265px;
 }
 
-.addright h3{
+.addright h3 {
     margin-top: 12px;
 }
 
-.rating{
+.rating {
     margin: 60px;
     color: white;
+}
+
+.review-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
+    margin: 20px;
+    padding: 20px;
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.review-header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.review-header .info {
+    flex-grow: 1;
+}
+
+.review-header .info h3 {
+    margin: 0;
+    font-size: 18px;
+}
+
+.review-header .info p {
+    margin: 5px 0;
+    font-size: 14px;
+    color: #555;
+}
+
+.review-header .stars {
+    font-size: 16px;
+    color: #FFD700;
+}
+
+.review-content {
+    font-size: 14px;
+    color: #333;
+    margin: 15px 0;
+    line-height: 1.6;
+}
+
+.review-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.review-buttons button {
+    padding: 8px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.review-buttons .update {
+    background-color: #4caf50;
+    color: white;
+}
+
+.review-buttons .update:hover {
+    background-color: #45a049;
+}
+
+.review-buttons .download {
+    background-color: #f44336;
+    color: white;
+}
+
+.review-buttons .download:hover {
+    background-color: #e53935;
 }
