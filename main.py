@@ -32,13 +32,17 @@ def review():
 def notes():
     return render_template("/components/Notes/index.html")
 
-@app.route("/clgrev")
-def clgrev():
-    return render_template("/components/review/review.html")
+@app.route("/college")
+def college():
+    return render_template("/components/review/college.html")
 
 @app.route("/mainclg")
 def mainclg():
     return render_template("/components/review/{collegename}.html")
+
+@app.route("/contact")
+def contact():
+    return render_template("/components/contact/index.html")
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
